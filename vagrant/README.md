@@ -1,0 +1,3 @@
+# Work In Progress
+
+with the `set -e`, the script carsh on SDCC instalation... I don't know why but it seems to be related to `quilt refresh`...
