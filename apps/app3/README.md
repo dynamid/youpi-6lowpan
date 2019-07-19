@@ -5,4 +5,4 @@ the objective is to embed the client coap of the app1 directly on a device (cc26
 the topology we are looking for:
 
 
-![Topology](https://github.com/dynamid/youpi-6lowpan/tree/master/apps/app3/topo.jpg)
+![Topology](https://github.com/dynamid/youpi-6lowpan/blob/master/apps/app3/topo.jpg)
