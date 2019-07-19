@@ -8,8 +8,9 @@ sudo apt upgrade -y
 sudo apt install dpkg-* curl wget git gcc-arm-none-eabi virtualbox-guest-dkms virtualbox-guest-x11 srecord linux-headers-$(uname -r) -y
 sudo apt install vim xorg xfce4 -y
 sudo VBoxClient --seamless
-echo "sudo startxfce4" > .initrc
-echo "setxkbmap fr" >> .bashrc
+
+# french keyboard
+sudo sed 's/us/fr/' /etc/default/keyboard > /etc/default/keyboard
 
 # creation de la toolchain sdcc
 apt source sdcc -y
@@ -40,7 +41,7 @@ git clone https://github.com/dashesy/cc-tool.git
 sudo apt install wget curl git -y
 wget -q https://ftp.mozilla.org/pub/firefox/releases/55.0.3/linux-x86_64/fr/firefox-55.0.3.tar.bz2
 tar -xvjf firefox-55.0.3.tar.bz2
-echo "alias firefoxCopper=\"firefox/firefox\""
+#echo "alias firefoxCopper=\"firefox/firefox\""
 
 git clone https://github.com/mkovatsc/Copper.git
 head Copper/README.md -n 38 | tail -n 21 > HOWTOINSTALLFIREFOX.INFO.md
@@ -54,7 +55,7 @@ sudo apt install libgconf-2-4 -y
 sudo ln -s /lib/x86_64-linux-gnu/libudev.so.1.6.5 /usr/lib/libudev.so.0
 sudo chmod +x uniflash_sl.5.0.0.2289.run
 sudo ./uniflash_sl.5.0.0.2289.run --mode unattended
-echo "alias uniflash=\"/opt/ti/uniflash_5.0.0/node_webkit/nw\"" >> .bashrc
+#echo "alias uniflash=\"/opt/ti/uniflash_5.0.0/node_webkit/nw\"" >> .bashrc
 
 
 setxkbmap fr
