@@ -1,3 +1,3 @@
-# Work In Progress
+# SDK for the YOUPI-6LowPAN platform
 
-with the `set -e`, the script carsh on SDCC instalation... I don't know why but it seems to be related to `quilt refresh`...
+This vagrant setups a VM to develop and flash contiki on CC2531 and CC2650
