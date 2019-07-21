@@ -5,11 +5,16 @@ echo deb http://ftp.debian.org/debian stretch-backports main contrib > /etc/apt/
 
 DEBIAN_FRONTEND=noninteractive apt-get update -y
 DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
-DEBIAN_FRONTEND=noninteractive apt-get install -y dpkg-* curl wget git gcc-arm-none-eabi virtualbox-guest-dkms virtualbox-guest-x11 srecord linux-headers-$(uname -r) linux-headers-amd64 vim xorg xfce4
+DEBIAN_FRONTEND=noninteractive apt-get install -y dpkg-* curl wget git gcc-arm-none-eabi virtualbox-guest-dkms virtualbox-guest-x11 srecord linux-headers-$(uname -r) linux-headers-amd64 vim xorg xfce4 xfce4-terminal
 #VBoxClient --seamless
 
 # french keyboard
-sed 's/us/fr/' /etc/default/keyboard > /etc/default/keyboard
+#sed 's/us/fr/' /etc/default/keyboard > /etc/default/keyboard
+echo -e "XKBMODEL="pc105"
+XKBLAYOUT=\"fr\"
+XKBVARIANT=\"latin9\"
+XKBOPTIONS=\"terminate:ctrl_alt_bksp\"
+BACKSPACE=\"guess\"" > /etc/default/keyboard
 
 # creation de la toolchain sdcc
 DEBIAN_FRONTEND=noninteractive apt-get source sdcc -y
