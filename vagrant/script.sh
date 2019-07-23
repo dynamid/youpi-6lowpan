@@ -10,7 +10,7 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y dpkg-* curl wget git gcc-arm-n
 
 # french keyboard
 #sed 's/us/fr/' /etc/default/keyboard > /etc/default/keyboard
-echo -e "XKBMODEL="pc105"
+echo -e "XKBMODEL=\"pc105\"
 XKBLAYOUT=\"fr\"
 XKBVARIANT=\"latin9\"
 XKBOPTIONS=\"terminate:ctrl_alt_bksp\"
@@ -60,5 +60,6 @@ chmod +x uniflash_sl.5.0.0.2289.run
 ./uniflash_sl.5.0.0.2289.run --mode unattended
 #echo "alias uniflash=\"/opt/ti/uniflash_5.0.0/node_webkit/nw\"" >> .bashrc
 
-echo "#additions to bashrc" >> .bashrc
+echo "additions to .bashrc"
+script_bashrc.sh
 reboot
