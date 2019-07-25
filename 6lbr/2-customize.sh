@@ -29,6 +29,14 @@ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpHXJmHky7Gh1Z4cZI3itodZC1Wn2olvfSmN
 chmod 600 $TEMPDIR/home/pi/.ssh/authorized_keys
 chown 1000:1000 $TEMPDIR/home/pi/.ssh/authorized_keys
 
+#preinstalation du 6lbr (compilation sur le raspi plus tard)
+cd $TEMPDIR/home/pi
+git clone --recursive https://github.com/cetic/6lbr.git
+chmod a+rwx 6lbr -R
+cd 6lbr
+git submodule sync
+git submodule update --init
+
 
 echo "Cleaning..."
 
