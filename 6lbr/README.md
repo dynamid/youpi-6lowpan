@@ -31,3 +31,31 @@
 ## Windows Users
 
 *You're fired.*
+
+# Install 6lbr on the raspi
+
+* ``` sudo apt update && sudo apt upgrade ```
+* ``` sudo apt-get install libncurses5-dev bridge-utils ```
+* ``` sed -i '1s/^/dwc_otg.speed=1/' /boot/cmdline.txt ```
+
+* Go to ```contiki/examples/6lbr/```
+  * ``` make all pluguins tools ```
+  * ``` sudo make install ```
+
+* Configuration in ``` /etc/6lbr/6lbr.conf ``` :
+```
+MODE=ROUTER
+RAW_ETH=1
+BRIDGE=0
+DEV_BRIDGE=br0
+DEV_TAP=tap0
+DEV_ETH=eth0
+RAW_ETH_FCS=0
+DEV_RADIO=/dev/ttyACM0
+BAUDRATE=115200
+LOG_LEVEL=3
+```
+
+* ``` sudo /usr/lib/6lbr/bin/nvm_tool --update --channel 25 /etc/6lbr/nvm.dat ```
+* ``` sudo service 6lbr start ```
+
