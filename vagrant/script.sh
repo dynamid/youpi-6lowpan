@@ -26,7 +26,6 @@ echo $'04_makefile_mcs51' >> series
 cd ../..
 
 dpkg-buildpackage -b
-#dpkg-buildpackage -b
 cd ..
 dpkg -i sdcc*.deb
 
@@ -61,5 +60,5 @@ chmod +x uniflash_sl.5.0.0.2289.run
 #echo "alias uniflash=\"/opt/ti/uniflash_5.0.0/node_webkit/nw\"" >> .bashrc
 
 echo "additions to .bashrc"
-script_bashrc.sh
+/vagrant/script_bashrc.sh
 reboot
