@@ -2,7 +2,7 @@
 
 the topology:
 
-![Topology](https://github.com/dynamid/youpi-6lowpan/blob/master/apps/app3/topo.jpg)
+![Topology](https://github.com/dynamid/youpi-6lowpan/blob/master/apps/coap-client-cc2650/topo.jpg)
 
 
 # dongle configuration:
