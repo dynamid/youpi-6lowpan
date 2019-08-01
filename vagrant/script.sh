@@ -62,7 +62,7 @@ chmod +x uniflash_sl.5.0.0.2289.run
 
 #youpi git
 git clone https://github.com/dynamid/youpi-6lowpan.git
-chmod a+rwx youpi-6lowpan.git -R
+chmod a+rwx youpi-6lowpan -R
 mkdir -p ~/.mozilla/firefox
 cp -r youpi-6lowpan/other/firefox_Copper/profile/ ~/.mozilla/firefox/vcoma1rd.firefox55/
 cp -r youpi-6lowpan/other/firefox_Copper/profiles.ini ~/.mozilla/firefox/
