@@ -47,7 +47,7 @@ tar -xvjf firefox-55.0.3.tar.bz2
 
 git clone https://github.com/mkovatsc/Copper.git
 chmod a+rwx Copper -R
-head Copper/README.md -n 38 | tail -n 21 > HOWTOINSTALLFIREFOX.INFO.md
+#head Copper/README.md -n 38 | tail -n 21 > HOWTOINSTALLFIREFOX.INFO.md
 
 #mosquitto MQTT
 DEBIAN_FRONTEND=noninteractive apt-get install mosquitto* -y
