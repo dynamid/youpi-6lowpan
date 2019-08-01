@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
                  "--target", :id,
                  "--name", "CC2531 Debugger",
                  "--manufacturer", "Texas Instruments",
-                 "--product", "CC Debugger"
+                 "--product", "CC Debugger"]
   #CC2531 Dongle
   vb.customize ["usbfilter", "add", "0",
                  "--target", :id,

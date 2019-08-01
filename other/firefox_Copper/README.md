@@ -1,3 +1,7 @@
+# if you are in the youpi-6lowpan-VM
+
+All the configuration is already done : just use `firefoxCopper` command.
+
 # Firefox 55 profile with Copper
 
 That is a profile with all the configurations done.

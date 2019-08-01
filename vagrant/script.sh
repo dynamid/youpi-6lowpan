@@ -46,6 +46,7 @@ tar -xvjf firefox-55.0.3.tar.bz2
 #echo "alias firefoxCopper=\"firefox/firefox\""
 
 git clone https://github.com/mkovatsc/Copper.git
+chmod a+rwx Copper -R
 head Copper/README.md -n 38 | tail -n 21 > HOWTOINSTALLFIREFOX.INFO.md
 
 #mosquitto MQTT
@@ -58,6 +59,13 @@ ln -s /lib/x86_64-linux-gnu/libudev.so.1.6.5 /usr/lib/libudev.so.0
 chmod +x uniflash_sl.5.0.0.2289.run
 ./uniflash_sl.5.0.0.2289.run --mode unattended
 #echo "alias uniflash=\"/opt/ti/uniflash_5.0.0/node_webkit/nw\"" >> .bashrc
+
+#youpi git
+git clone https://github.com/dynamid/youpi-6lowpan.git
+chmod a+rwx youpi-6lowpan.git -R
+mkdir -p ~/.mozilla/firefox
+cp -r youpi-6lowpan/other/firefox_Copper/profile/ ~/.mozilla/firefox/vcoma1rd.firefox55/
+cp -r youpi-6lowpan/other/firefox_Copper/profiles.ini ~/.mozilla/firefox/
 
 echo "additions to .bashrc"
 /vagrant/script_bashrc.sh
