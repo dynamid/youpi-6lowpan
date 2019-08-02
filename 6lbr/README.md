@@ -36,6 +36,8 @@
 
 ## config 6lbr
 
+if you dont have ethernet connection to ssh on the raspi : create a wifi link with a `wpa_supplicant` file in the image.
+
 * ``` sudo apt update && sudo apt upgrade ```
 * ``` sudo apt-get install libncurses5-dev bridge-utils ```
 * ``` sed -i '1s/^/dwc_otg.speed=1/' /boot/cmdline.txt ```
