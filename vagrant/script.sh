@@ -5,7 +5,7 @@ echo deb http://ftp.debian.org/debian stretch-backports main contrib > /etc/apt/
 
 DEBIAN_FRONTEND=noninteractive apt-get update -y
 DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
-DEBIAN_FRONTEND=noninteractive apt-get install -y dpkg-* curl wget git gcc-arm-none-eabi virtualbox-guest-dkms virtualbox-guest-x11 srecord linux-headers-$(uname -r) linux-headers-amd64 vim xorg xfce4 xfce4-terminal
+DEBIAN_FRONTEND=noninteractive apt-get install -y dpkg-* curl wget git gcc-arm-none-eabi virtualbox-guest-dkms virtualbox-guest-x11 srecord linux-headers-$(uname -r) linux-headers-amd64 vim xorg xfce4 xfce4-terminal libusb-1.0 libboost-all-dev libglib2.0-dev
 #VBoxClient --seamless
 
 # french keyboard
@@ -39,6 +39,13 @@ chmod a+rwx contiki -R
 
 # outil de flash CC2531
 git clone https://github.com/dashesy/cc-tool.git
+chmod a+rwx cc-tool -R
+cd cc-tool
+./bootstrap
+autoreconf -vis
+./configure
+make
+cd ..
 
 #firefox coap
 wget -q https://ftp.mozilla.org/pub/firefox/releases/55.0.3/linux-x86_64/fr/firefox-55.0.3.tar.bz2

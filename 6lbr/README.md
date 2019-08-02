@@ -34,6 +34,8 @@
 
 # Install 6lbr on the raspi
 
+## config 6lbr
+
 * ``` sudo apt update && sudo apt upgrade ```
 * ``` sudo apt-get install libncurses5-dev bridge-utils ```
 * ``` sed -i '1s/^/dwc_otg.speed=1/' /boot/cmdline.txt ```
@@ -59,3 +61,6 @@ LOG_LEVEL=3
 * ``` sudo /usr/lib/6lbr/bin/nvm_tool --update --channel 25 /etc/6lbr/nvm.dat ```
 * ``` sudo service 6lbr start ```
 
+## slip-radio on cc2531
+
+see the `doc/cc2531` to compile and flash the cc2531 with `contiki/examples/ipv6/slip-radio`. If not working, i put the slip-radio file `.hex` in the repo.
