@@ -31,7 +31,7 @@ dpkg -i sdcc*.deb
 
 # obtention de contiki
 git clone https://github.com/contiki-os/contiki.git
-#git clone https://github.com/g-oikonomou/contiki.git
+git clone -b cc/slip-radio https://github.com/g-oikonomou/contiki.git contiki-oikonomou
 cd contiki
 git submodule update --init --recursive
 cd ..

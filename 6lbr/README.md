@@ -63,4 +63,4 @@ LOG_LEVEL=3
 
 ## slip-radio on cc2531
 
-see the `doc/cc2531` to compile and flash the cc2531 with `contiki/examples/ipv6/slip-radio`. If not working, i put the slip-radio file `.hex` in the repo.
+see the `doc/cc2531` to compile and flash the cc2531 with `contiki-oikonomou/examples/cc2530dk/cc2531-slip-radio`(repo : `https://github.com/g-oikonomou/contiki` branch `cc/slip-radio`). If not working, i put the slip-radio file `.hex` in the repo.
