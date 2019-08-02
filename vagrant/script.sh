@@ -35,7 +35,7 @@ git clone -b cc/slip-radio https://github.com/g-oikonomou/contiki.git contiki-oi
 cd contiki
 git submodule update --init --recursive
 cd ..
-chmod a+rwx contiki -R
+chmod a+rwx -R contiki{,-oikonomou}
 
 # outil de flash CC2531
 git clone https://github.com/dashesy/cc-tool.git
