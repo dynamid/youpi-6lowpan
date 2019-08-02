@@ -2,7 +2,7 @@
 
 go to the `contiki` folder of your app.
 
-do `make TARGET=srf- BOARD=cc2650/sensortag all`, it will produce a `.bin` file.
+do `make TARGET=srf06-cc26xx BOARD=cc2650/sensortag all`, it will produce a `.bin` file.
 
 # How to flash
 
