@@ -35,7 +35,6 @@ git clone -b cc/slip-radio https://github.com/g-oikonomou/contiki.git contiki-oi
 cd contiki
 git submodule update --init --recursive
 cd ..
-chmod a+rwx -R contiki{,-oikonomou}
 
 # outil de flash CC2531
 git clone https://github.com/dashesy/cc-tool.git
@@ -53,7 +52,6 @@ tar -xvjf firefox-55.0.3.tar.bz2
 #echo "alias firefoxCopper=\"firefox/firefox\""
 
 git clone https://github.com/mkovatsc/Copper.git
-chmod a+rwx Copper -R
 #head Copper/README.md -n 38 | tail -n 21 > HOWTOINSTALLFIREFOX.INFO.md
 
 #mosquitto MQTT
@@ -69,11 +67,11 @@ chmod +x uniflash_sl.5.0.0.2289.run
 
 #youpi git
 git clone https://github.com/dynamid/youpi-6lowpan.git
-chmod a+rwx youpi-6lowpan -R
-mkdir -p ~/.mozilla/firefox
-cp -r youpi-6lowpan/other/firefox_Copper/profile/ ~/.mozilla/firefox/vcoma1rd.firefox55/
-cp -r youpi-6lowpan/other/firefox_Copper/profiles.ini ~/.mozilla/firefox/
+mkdir -p /home/vagrant/.mozilla/firefox
+cp -r youpi-6lowpan/other/firefox_Copper/profile/ /home/vagrant/.mozilla/firefox/vcoma1rd.firefox55/
+cp -r youpi-6lowpan/other/firefox_Copper/profiles.ini /home/vagrant/.mozilla/firefox/
 
+chown vagrant /home/vagrant -R
 echo "additions to .bashrc"
 /vagrant/script_bashrc.sh
 reboot

@@ -20,4 +20,4 @@ https://www.zigbee2mqtt.io/getting_started/flashing_the_cc2531.html
 
 locate the cc-tool folder if you are in the youpi-6lowpan-VM (~/cc-tool) or see https://github.com/dashesy/cc-tool (and `make` it [see the `vagrant/script.sh`_Outil de flash CC2531_ part] )
 
-to flash: `./cc-tool -e -w path/to/file.hex`
+to flash: `sudo ./cc-tool -e -w path/to/file.hex`

@@ -20,8 +20,16 @@ echo "Customizing the raspbian..."
 #on active le ssh
 touch $TEMPDIR/boot/ssh
 
+#wifi configuration
+YOURSSID="SSID"
+YOURPASS="PASSWORD"
+YOURIP="192.168.43.100/24"
+YOURROUTERIP="192.168.43.1" #with internet access (smartphone)
+echo -e "country=fr\nupdate_config=1\nctrl_interface=/var/run/wpa_supplicant\n\nnetwork={\nscan_ssid=1\nssid=\"$YOURSSID\"\npsk=\"$YOURPASS\"\n}" > $TEMPDIR/boot/wpa_supplicant.conf
+echo -e "require dhcp_server_identifier\n\ninterface wlan0\nstatic ip_address=$YOURIP\nstatic routers=$YOURROUTERIP\nstatic domain_name_servers=$YOURROUTERIP" > $TEMPDIR/etc/dhcpcd.conf
+
 #on set le mot de passe de l'utilisateur pi
-sed -i -e 's/pi:[^:]*:/pi:$6$HcL0ST5lcHV1K$GJIR0042dXYa6ptVt1v20Ca33EaVOk8llniTU.zAdgJBwX1AkEH6BV6ls.OwpvdKHGxiRhtPCBAKXFeyFllFI.:/' $TEMPDIR/etc/shadow
+sed -i -e 's/pi:[^:]*:/pi:$1$pilog$.8Kn5TcS0mZl0Ug5TiXPg0:/' $TEMPDIR/etc/shadow
 
 #on set la clé ssh pour pi
 mkdir $TEMPDIR/home/pi/.ssh
@@ -31,11 +39,12 @@ chown 1000:1000 $TEMPDIR/home/pi/.ssh/authorized_keys
 
 #preinstalation du 6lbr (compilation sur le raspi plus tard)
 cd $TEMPDIR/home/pi
-git clone --recursive https://github.com/cetic/6lbr.git
+git clone --recursive https://github.com/cetic/6lbr
 chmod a+rwx 6lbr -R
 cd 6lbr
 git submodule sync
 git submodule update --init
+cd /
 
 
 echo "Cleaning..."
