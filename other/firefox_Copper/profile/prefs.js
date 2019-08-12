@@ -215,3 +215,5 @@ user_pref("toolkit.startup.last_success", 1563528742);
 user_pref("toolkit.telemetry.cachedClientID", "2bc78be3-f880-40c5-b15b-45b63f874b69");
 user_pref("toolkit.telemetry.previousBuildID", "20170824123605");
 user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
+user_pref("xpinstall.signatures.required", false);
+user_pref("xpinstall.whitelist.required", false);
