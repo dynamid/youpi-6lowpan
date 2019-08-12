@@ -1,15 +1,18 @@
 # SDK for the YOUPI-6LowPAN platform
 
-This vagrant setups a VM to develop and flash contiki on CC2531 and CC2650
-
-* login: `vagrant`
-* passw: `vagrant`
-
 # requirement
 
 * `vagrant`
 * `virtualbox` and `virtualbox-guest-utils`, `virtualbox-guest-module-arch` (because I am using arch)
 * allow VB to use USB: `sudo usermod -a -G vboxusers YOUR_USER_NAME`
+
+# How to start
+
+* do `vagrant up` in the `vagrant` folder
+* enter `1` for your ethernet interface (it can be an other number, select your ethernet interface)
+* grab a coffe : it is realy long
+* login: `vagrant`
+* passw: `vagrant`
 
 # Content
 
