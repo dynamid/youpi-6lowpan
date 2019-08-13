@@ -74,4 +74,7 @@ cp -r youpi-6lowpan/other/firefox_Copper/profiles.ini /home/vagrant/.mozilla/fir
 chown vagrant /home/vagrant -R
 echo "additions to .bashrc"
 /vagrant/script_bashrc.sh
+
+ip -6 r add fd00::/64 via bbbb::
+
 reboot
