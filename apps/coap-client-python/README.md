@@ -12,7 +12,7 @@
 
 # dongle configuration:
 
-CC2650 with the contiki-web-demo : `contiki/examples/cc26xx/cc26xx-web-demo/`.
+CC2650 with the contiki-web-demo : [contiki repo](https://github.com/contiki-os/contiki/examples/cc26xx/cc26xx-web-demo/).
 
 See configuration files in the docs/cc2650 part of this repository.
 

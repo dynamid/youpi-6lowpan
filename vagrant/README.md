@@ -25,3 +25,15 @@
 * firefox+Copper    | Coap tool → you may need to link the eth of the host and the VM to use it (IDK how...)
 * mosquitto         | MQTT tool
 * this repo
+
+# Make firefox & Copper working
+
+* run it with the command `firefoxCopper`
+
+Before you can use them : you need to **restart firefox**. So first time you start it it will NOT work, just restart and it is ok (firefox configure the app when it start)
+
+# Make uniflash working
+
+* run it with the command `uniflash`
+
+You can find how to use it in the [CC2650 documentation](../docs/CC2650)

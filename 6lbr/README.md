@@ -101,6 +101,7 @@ post-up ip link set br0 address 'ip link show eth0 | grep ether | awk '{print $2
   * plug the debuger and the cc2531 together and to the computer
   * `cd ~/cc-tool/`
   * `./cc-tool -e -w ~/contiki-oikonomou/examples/cc2530dk/cc2531-slip-radio/cc2531-slip-radio.hex`
+  * info [here](../docs/cc2531)
 
 * not in the VM:
   * you should install the VM

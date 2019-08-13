@@ -1,6 +1,6 @@
 # dongle configuration:
 
-CC2531 with sensniff : `contiki/example/sensniff`
+CC2531 with sensniff : [contiki repo](https://github.com/contiki-os/contiki/examples/sensniff)
 
 put `DEFINES+=MODELS_CONF_CC2531_USB_STICK=1` in the `Makefile`
 

@@ -2,12 +2,12 @@
 
 the topology:
 
-![Topology](https://github.com/dynamid/youpi-6lowpan/blob/master/apps/coap-client-cc2650/topo.jpg)
+![Topology](../../other/imgs/topo.jpg)
 
 
 # dongle configuration:
 
-* 2 CC2650 with the contiki-web-demo : `contiki/examples/cc26xx/cc26xx-web-demo/`.
+* 2 CC2650 with the contiki-web-demo : [contiki repo](https://github.com/contiki-os/contiki/examples/cc26xx/cc26xx-web-demo/).
 
 See configuration files in the docs/cc2650 part of this repository.
 

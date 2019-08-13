@@ -14,7 +14,7 @@ Images soon
 
 if the led is red: press the reset button.
 
-https://www.zigbee2mqtt.io/getting_started/flashing_the_cc2531.html
+If you a [tutorial](https://www.zigbee2mqtt.io/getting_started/flashing_the_cc2531.html) 😊
 
 ## use cc-tool
 
