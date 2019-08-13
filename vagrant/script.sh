@@ -16,35 +16,35 @@ XKBVARIANT=\"latin9\"
 XKBOPTIONS=\"terminate:ctrl_alt_bksp\"
 BACKSPACE=\"guess\"" > /etc/default/keyboard
 
-#   # creation de la toolchain sdcc
-#   DEBIAN_FRONTEND=noninteractive apt-get source sdcc -y
-#   DEBIAN_FRONTEND=noninteractive apt-get build-dep sdcc -y
-#   
-#   cd sdcc-*+dfsg/debian/patches/
-#   wget http://blog.ruecker.fi/wp-content/uploads/2015/02/04_makefile_mcs51
-#   echo $'04_makefile_mcs51' >> series
-#   cd ../..
-#   
-#   dpkg-buildpackage -b
-#   cd ..
-#   dpkg -i sdcc*.deb
-#   
-#   # obtention de contiki
-#   git clone https://github.com/contiki-os/contiki.git
-#   git clone -b cc/slip-radio https://github.com/g-oikonomou/contiki.git contiki-oikonomou
-#   cd contiki
-#   git submodule update --init --recursive
-#   cd ..
-#   
-#   # outil de flash CC2531
-#   git clone https://github.com/dashesy/cc-tool.git
-#   chmod a+rwx cc-tool -R
-#   cd cc-tool
-#   ./bootstrap
-#   autoreconf -vis
-#   ./configure
-#   make
-#   cd ..
+# creation de la toolchain sdcc
+DEBIAN_FRONTEND=noninteractive apt-get source sdcc -y
+DEBIAN_FRONTEND=noninteractive apt-get build-dep sdcc -y
+
+cd sdcc-*+dfsg/debian/patches/
+wget http://blog.ruecker.fi/wp-content/uploads/2015/02/04_makefile_mcs51
+echo $'04_makefile_mcs51' >> series
+cd ../..
+
+dpkg-buildpackage -b
+cd ..
+dpkg -i sdcc*.deb
+
+# obtention de contiki
+git clone https://github.com/contiki-os/contiki.git
+git clone -b cc/slip-radio https://github.com/g-oikonomou/contiki.git contiki-oikonomou
+cd contiki
+git submodule update --init --recursive
+cd ..
+
+# outil de flash CC2531
+git clone https://github.com/dashesy/cc-tool.git
+chmod a+rwx cc-tool -R
+cd cc-tool
+./bootstrap
+autoreconf -vis
+./configure
+make
+cd ..
 
 
 #firefox coap
@@ -55,15 +55,15 @@ tar -xvjf firefox-55.0.3.tar.bz2
 #head Copper/README.md -n 38 | tail -n 21 > HOWTOINSTALLFIREFOX.INFO.md
 
 #mosquitto MQTT
-#   DEBIAN_FRONTEND=noninteractive apt-get install mosquitto* -y
-#   
-#   #uniflash
-#   wget -q http://software-dl.ti.com/ccs/esd/uniflash/uniflash_sl.5.0.0.2289.run
-#   DEBIAN_FRONTEND=noninteractive apt-get install libgconf-2-4 -y
-#   ln -s /lib/x86_64-linux-gnu/libudev.so.1.6.5 /usr/lib/libudev.so.0
-#   chmod +x uniflash_sl.5.0.0.2289.run
-#   ./uniflash_sl.5.0.0.2289.run --mode unattended
-#   #echo "alias uniflash=\"/opt/ti/uniflash_5.0.0/node_webkit/nw\"" >> .bashrc
+DEBIAN_FRONTEND=noninteractive apt-get install mosquitto* -y
+
+#uniflash
+wget -q http://software-dl.ti.com/ccs/esd/uniflash/uniflash_sl.5.0.0.2289.run
+DEBIAN_FRONTEND=noninteractive apt-get install libgconf-2-4 -y
+ln -s /lib/x86_64-linux-gnu/libudev.so.1.6.5 /usr/lib/libudev.so.0
+chmod +x uniflash_sl.5.0.0.2289.run
+./uniflash_sl.5.0.0.2289.run --mode unattended
+#echo "alias uniflash=\"/opt/ti/uniflash_5.0.0/node_webkit/nw\"" >> .bashrc
 
 #youpi git
 git clone https://github.com/dynamid/youpi-6lowpan.git
