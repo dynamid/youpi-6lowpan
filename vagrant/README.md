@@ -5,6 +5,7 @@
 * `vagrant`
 * `virtualbox` and `virtualbox-guest-utils`, `virtualbox-guest-module-arch` (because I am using arch)
 * allow VB to use USB: `sudo usermod -a -G vboxusers YOUR_USER_NAME`
+* create a folder next to the `Vagrantfile` named `sync-folder` : `mkdir sync-folder`
 
 # How to start
 
