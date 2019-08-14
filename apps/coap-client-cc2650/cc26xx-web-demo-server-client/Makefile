@@ -20,5 +20,5 @@ APPS += er-coap
 APPS += rest-engine
 APPS += mqtt
 
-CONTIKI=~/contiki
+CONTIKI=../../../../contiki
 include $(CONTIKI)/Makefile.include
