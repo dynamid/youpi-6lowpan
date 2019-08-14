@@ -58,11 +58,11 @@ tar -xvjf firefox-55.0.3.tar.bz2
 DEBIAN_FRONTEND=noninteractive apt-get install mosquitto* -y
 
 #uniflash
-wget -q http://software-dl.ti.com/ccs/esd/uniflash/uniflash_sl.5.0.0.2289.run
-DEBIAN_FRONTEND=noninteractive apt-get install libgconf-2-4 -y
-ln -s /lib/x86_64-linux-gnu/libudev.so.1.6.5 /usr/lib/libudev.so.0
-chmod +x uniflash_sl.5.0.0.2289.run
-./uniflash_sl.5.0.0.2289.run --mode unattended
+#wget -q http://software-dl.ti.com/ccs/esd/uniflash/uniflash_sl.5.0.0.2289.run
+#DEBIAN_FRONTEND=noninteractive apt-get install libgconf-2-4 -y
+#ln -s /lib/x86_64-linux-gnu/libudev.so.1.6.5 /usr/lib/libudev.so.0
+#chmod +x uniflash_sl.5.0.0.2289.run
+#./uniflash_sl.5.0.0.2289.run --mode unattended
 #echo "alias uniflash=\"/opt/ti/uniflash_5.0.0/node_webkit/nw\"" >> .bashrc
 
 #youpi git

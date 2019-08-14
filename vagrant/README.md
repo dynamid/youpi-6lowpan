@@ -21,7 +21,6 @@
 * cc2531 tool-chain | sdcc
 * cc2650 tool-chain
 * cc-tool           | to flash cc2531
-* uniflash          | to flash cc2650
 * firefox+Copper    | Coap tool → you may need to link the eth of the host and the VM to use it (IDK how...)
 * mosquitto         | MQTT tool
 * this repo
@@ -34,6 +33,6 @@ Before you can use them : you need to **restart firefox**. So first time you sta
 
 # Make uniflash working
 
-* run it with the command `uniflash`
+uniflash is not working on the VM. You should install it and flash from the host. You can use the `~/synced-folder` to move `.hex` file from the VM to the host.
 
-You can find how to use it in the [CC2650 documentation](../docs/CC2650)
+You can find how to install and use it in the [CC2650 documentation](../docs/CC2650)
