@@ -75,6 +75,8 @@ chown vagrant /home/vagrant -R
 echo "additions to .bashrc"
 /vagrant/script_bashrc.sh
 
-ip -6 r add fd00::/64 via bbbb::
+echo "mount -t vboxsf -o uid=1000,gid=1000 home_vagrant_synced-folder /home/vagrant/synced-folder" >> .bash_profile
+
+#ip -6 r add fd00::/64 via bbbb::
 
 reboot
