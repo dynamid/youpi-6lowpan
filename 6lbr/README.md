@@ -41,57 +41,7 @@ log on the pi via the hotspot (you should know password and ip if you set them)
 
 Then, just follow thoses steps to finalize the install and the configuration of the 6lbr.
 
-* ` sudo apt update && sudo apt upgrade `
-* ` sudo apt-get install libncurses5-dev bridge-utils `
-* ` sudo sed -i '1s/^/dwc_otg.speed=1 /' /boot/cmdline.txt `
-
-* Go to `~/6lbr/examples/6lbr/`
-  * ` make all plugins tools `
-  * go grab a coffe it may be a bit long...
-  * ` sudo make install `
-
-* Configuration in ` /etc/6lbr/6lbr.conf `:
-```
-MODE=ROUTER
-
-RAW_ETH=0
-BRIDGE=1
-CREATE_BRIDGE=0
-DEV_BRIDGE=br0
-DEV_TAP=tap0
-DEV_ETH=eth0
-RAW_ETH_FCS=0
-
-DEV_RADIO=/dev/ttyACM0
-BAUDRATE=115200
-
-LOG_LEVEL=3
-```
-
-* ` sudo /usr/lib/6lbr/bin/nvm_tool --update --channel 25 /etc/6lbr/nvm.dat ` (Not tested with other channel but should work too)
-* add two lines in `/etc/sysctl.conf`:
-```
-net.ipv4.ip_forward = 1
-net.ipv6.conf.all.forwarding=1
-```
-
-* Configuration of the bridge in ` /etc/network/interfaces.d/eth0 `:
-```
-auto eth0
-allow-hotplug eth0
-iface eth0 inet static
-address 0.0.0.0
-
-auto br0
-iface br0 inet dhcp
-bridge_ports eth0
-bridge_stp off
-up echo 0 > /sys/devices/virtual/net/br0/bridge/multicast_snooping
-post-up ip link set br0 address 'ip link show eth0 | grep ether | awk '{print $2}''
-```
-
-* ` sudo systemctl enable 6lbr ` <- important
-* ` sudo service 6lbr start `
+* ` sudo ./create6lbr.sh `
 
 ## slip-radio on cc2531
 
