@@ -5,7 +5,7 @@ echo deb http://ftp.debian.org/debian stretch-backports main contrib > /etc/apt/
 
 DEBIAN_FRONTEND=noninteractive apt-get update -y
 DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
-DEBIAN_FRONTEND=noninteractive apt-get install -y dpkg-* curl wget git gcc-arm-none-eabi virtualbox-guest-dkms virtualbox-guest-x11 srecord linux-headers-$(uname -r) linux-headers-amd64 vim xorg xfce4 xfce4-terminal libusb-1.0 libboost-all-dev libglib2.0-dev
+DEBIAN_FRONTEND=noninteractive apt-get install -y dpkg-* curl wget git gcc-arm-none-eabi virtualbox-guest-dkms virtualbox-guest-x11 srecord linux-headers-$(uname -r) linux-headers-amd64 vim xorg xfce4 xfce4-terminal libusb-1.0 libboost-all-dev libglib2.0-dev wireshark python-pyserial
 #VBoxClient --seamless
 
 # french keyboard

@@ -50,7 +50,7 @@ Then, just follow thoses steps to finalize the install and the configuration of 
   * `make all`
   * plug the debuger and the cc2531 together and to the computer
   * `cd ~/cc-tool/`
-  * `./cc-tool -e -w ~/contiki-oikonomou/examples/cc2530dk/cc2531-slip-radio/cc2531-slip-radio.hex`
+  * `sudo ./cc-tool -e -w ~/contiki-oikonomou/examples/cc2530dk/cc2531-slip-radio/cc2531-slip-radio.hex`
   * info [here](../docs/cc2531)
 
 * not in the VM:

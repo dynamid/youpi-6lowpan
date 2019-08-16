@@ -21,3 +21,7 @@ This repo provide some apps in the `apps` folder
 # Specific docs
 * doc for [cc2650](docs/cc2650) flash and compilation
 * doc for [cc2531](docs/cc2531) flash and compilation
+
+#Troubleshooting
+
+* If the bbbb:: ipv6 did not appear : reset the connection and reboot the raspi. If you are on the youpi-6lowpan-VM : restart the Host connection.
