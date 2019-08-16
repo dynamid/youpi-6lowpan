@@ -37,8 +37,12 @@ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpHXJmHky7Gh1Z4cZI3itodZC1Wn2olvfSmN
 chmod 600 $TEMPDIR/home/pi/.ssh/authorized_keys
 chown 1000:1000 $TEMPDIR/home/pi/.ssh/authorized_keys
 
+
+
 #preinstalation du 6lbr (compilation sur le raspi plus tard)
 cd $TEMPDIR/home/pi
+echo -e "sudo apt update\nsudo apt upgrade\nsudo apt-get install libncurses5-dev bridge-utils\nsudo sed -i '1s/^/dwc_otg.speed=1 /' /boot/cmdline.txt\n\ncd ~/6lbr/examples/6lbr/\nsudo su -c 'make all plugins tools' pi\nsudo make install\nsudo echo -e \"MODE=ROUTER\\\n\\\nRAW_ETH=0\\\nBRIDGE=1\\\nCREATE_BRIDGE=0\\\nDEV_BRIDGE=br0\\\nDEV_TAP=tap0\\\nDEV_ETH=eth0\\\nRAW_ETH_FCS=0\\\n\\\nDEV_RADIO=/dev/ttyACM0\\\nBAUDRATE=115200\\\n\\\nLOG_LEVEL=3\" > /etc/6lbr/6lbr.conf\n\nsudo /usr/lib/6lbr/bin/nvm_tool --update --channel 25 / etc/6lbr/nvm.dat\n\nsudo echo -e \"net.ipv4.ip_forward=1\\\nnet.ipv6.conf.all.forwarding=1\" >> /etc/sysctl.conf\nsudo echo -e \"auto eth0\\\nallow-hotplug eth0\\\niface eth0 inet static\\\naddress 0.0.0.0\\\n\\\nauto br0\\\niface br0 inet dhcp\\\nbridge_ports eth0\\\nbridge_stp off\\\nup echo 0> /sys/devices/virtual/net/br0/bridge/multicast_snooping\\\npost-up ip link set br0 address 'ip link show eth0 | grep ether | awk '{print \\\\$2}''\" > /etc/network/interfaces.d/eth0\n\nsudo systemctl enable 6lbr\nsudo service 6lbr start" > create6lbr.sh
+chmod +x create6lbr.sh
 git clone --recursive https://github.com/cetic/6lbr
 chmod a+rwx 6lbr -R
 cd 6lbr
