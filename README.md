@@ -4,16 +4,15 @@
 ## Purpose
 You can use this repo to build a little network using Coap communication over 6lowpan via contiki
 
-
-# Install 6lbr on raspy
-[6lbr](6lbr/) with CC2531 flashed with `slip-radio` from a fork of contiki.
-
-# Install youpi-6lowpan-VM via vagrant
+# 1: Install youpi-6lowpan-VM via vagrant
 Require `vagrant` over VirtualBox.
 
 Int the [vagrant](vagrant/) folder type `vagrant up` to generate a VM with compilation chain and tool already installed.
 
-# Apps
+# 2: Install 6lbr on raspy
+[6lbr](6lbr/) with CC2531 flashed with `slip-radio` from a fork of contiki.
+
+# 3: Apps
 This repo provide some apps in the `apps` folder
 * [coap-client-python](apps/coap-client-python/) : comunication beetween python and cc2650 via Coap over 6lowpan, using 6lbr
 * [sensniff](apps/sensniff/) : generation of `.pcap` files with cc2531 dongle sniff

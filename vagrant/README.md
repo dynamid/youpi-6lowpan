@@ -1,19 +1,22 @@
 # SDK for the YOUPI-6LowPAN platform
 
 # requirement
-
 * `vagrant`
 * `virtualbox` and `virtualbox-guest-utils`, `virtualbox-guest-module-arch` (because I am using arch)
 * allow VB to use USB: `sudo usermod -a -G vboxusers YOUR_USER_NAME`
 * create a folder next to the `Vagrantfile` named `sync-folder` : `mkdir sync-folder`
 
-# How to start
+# First Start (in the `vagrant` folder)
+* ` vagrant plugin install vagrant-vbguest `
+* ` vagrant vbguest `
 
-* do `vagrant up` in the `vagrant` folder
+# How to start (in the `vagrant folder)
+* `vagrant up`
 * enter `1` for your ethernet interface (it can be an other number, select your ethernet interface)
 * grab a coffe : it is realy long
 * login: `vagrant`
 * passw: `vagrant`
+* when logs in host's terminal are done : run `~/sync.sh`. It sync the `sync-folder`s (VM and host)
 
 # Content
 
