@@ -1,0 +1,4 @@
+aiocoap
+docopt
+pybluez
+bluepy
